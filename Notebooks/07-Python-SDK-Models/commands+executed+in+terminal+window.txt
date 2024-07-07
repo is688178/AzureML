@@ -1,0 +1,14 @@
+View your current conda environments. The active environment is marked with a *
+conda env list
+
+Create the environment based on the conda file provided. It takes a few minutes to build this environment.
+conda env create -f workstation_env.yml
+
+Activate the new environment.
+conda activate workstation_env
+
+Validate the correct environment is active, again looking for the environment marked with a *
+conda env list
+
+Create a new Jupyter kernel based on your active environment.
+python -m ipykernel install --user --name workstation_env --display-name "Workstation Env"
